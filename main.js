@@ -292,15 +292,13 @@
 //     console.log("Saturday");
 // }
 
-const cars = ["BMW", "Volvo", "Saad", "Ford"];
-let text = "";
+let age = "12";
 
-list:{
-  text += cars[0] + "<br>";
-  text += cars[1] + "<br>";
-  break list;
-  text += cars[2] + "<br>";
-  text += cars[3] + "<br>";
+age = Number(age);
+
+if(isNaN(age)){
+  console.log("Input is not a number");
 }
-
-console.log(text);
+else{
+  console.log((age < 18)?  "You are child" : "Your are adult");
+}
