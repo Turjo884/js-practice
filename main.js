@@ -292,13 +292,6 @@
 //     console.log("Saturday");
 // }
 
-let age = "12";
+const letters = new Set(["a", "b", "c", "e", "f"]);
 
-age = Number(age);
-
-if(isNaN(age)){
-  console.log("Input is not a number");
-}
-else{
-  console.log((age < 18)?  "You are child" : "Your are adult");
-}
+console.log(letters.values());
