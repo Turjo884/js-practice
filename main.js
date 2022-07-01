@@ -292,6 +292,11 @@
 //     console.log("Saturday");
 // }
 
-const letters = new Set(["a", "b", "c", "e", "f"]);
+const fruits = new Map();
 
-console.log(letters.values());
+
+fruits.set(40, 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+
+console.log(fruits.get("oranges"));
