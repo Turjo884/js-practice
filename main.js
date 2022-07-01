@@ -292,11 +292,5 @@
 //     console.log("Saturday");
 // }
 
-const fruits = new Map();
 
-
-fruits.set(40, 500);
-fruits.set("bananas", 300);
-fruits.set("oranges", 200);
-
-console.log(fruits.get("oranges"));
+console.log(["2", "3", "4"].constructor);
