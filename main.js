@@ -293,4 +293,8 @@
 // }
 
 
-console.log(["2", "3", "4"].constructor);
+function isArray(myArray){
+    console.log(myArray.constructor.toString().indexOf('Array') > -1);
+}
+
+isArray([1, 2, 3]);
