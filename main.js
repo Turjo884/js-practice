@@ -293,8 +293,13 @@
 // }
 
 
-function isArray(myArray){
-    console.log(myArray.constructor.toString().indexOf('Array') > -1);
-}
+// let x = "58994";
+// console.log(typeof Number(x));
 
-isArray([1, 2, 3]);
+
+// unary
+let y = "5";
+
+let x = + y;
+
+console.log(typeof x);
