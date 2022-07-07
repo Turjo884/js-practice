@@ -293,13 +293,5 @@
 // }
 
 
-// let x = "58994";
-// console.log(typeof Number(x));
-
-
-// unary
-let y = "5";
-
-let x = + y;
-
-console.log(typeof x);
+console.log(Number(false));
+console.log(Number(true));
