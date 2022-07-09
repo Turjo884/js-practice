@@ -293,5 +293,30 @@
 // }
 
 
-console.log(Number(false));
-console.log(Number(true));
+
+// let obj = {
+//     names : "Tahmid",
+//     id    : 12
+// };
+
+// console.log(typeof (obj.toString()))
+
+// console.log(!false);
+
+
+//Decimal to binary
+
+function dec2bin(dec){
+    console.log((dec >>> 0).toString(2));
+}
+
+dec2bin(-6);
+
+
+// Binary to Decimal
+
+function bin2dec(bin){
+    console.log(parseInt(bin,2).toString(10));
+}
+
+bin2dec(11111000);
