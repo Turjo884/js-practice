@@ -306,17 +306,25 @@
 
 //Decimal to binary
 
-function dec2bin(dec){
-    console.log((dec >>> 0).toString(2));
-}
+// function dec2bin(dec){
+//     console.log((dec >>> 0).toString(2));
+// }
 
-dec2bin(-6);
+// dec2bin(-6);
 
 
-// Binary to Decimal
+// // Binary to Decimal
 
-function bin2dec(bin){
-    console.log(parseInt(bin,2).toString(10));
-}
+// function bin2dec(bin){
+//     console.log(parseInt(bin,2).toString(10));
+// }
 
-bin2dec(1000);
+// bin2dec(1000);
+
+
+
+
+// learning regular experission
+// let text = ;
+console.log(/e/.exec("123456 anything else or other!"))
+;
