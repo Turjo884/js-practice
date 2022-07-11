@@ -319,4 +319,4 @@ function bin2dec(bin){
     console.log(parseInt(bin,2).toString(10));
 }
 
-bin2dec(11111000);
+bin2dec(1000);
