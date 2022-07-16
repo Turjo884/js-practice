@@ -334,7 +334,7 @@
 // Learning Js errors
 
 
-let x = 11 ;
+let x = 11;
 
 try{
     if(x == "") throw "empty";
@@ -346,5 +346,16 @@ try{
 catch(err){
     console.log(err);
 }
+finally{
+    console.log("I am testing errors");
+}
 
-console.log("I am testing error");
+
+let num = 5;
+
+try{
+    num.toPrecision(500);
+}
+catch(err){
+    console.log("to Precision error")
+}
