@@ -334,28 +334,28 @@
 // Learning Js errors
 
 
-let x = 11;
+// let x = 11;
 
-try{
-    if(x == "") throw "empty";
-    if(isNaN(x)) throw "not a number";
-    x = Number(x);
-    if(x < 5) throw "too low";
-    if(x > 10) throw "too high";
-}
-catch(err){
-    console.log(err);
-}
-finally{
-    console.log("I am testing errors");
-}
+// try{
+//     if(x == "") throw "empty";
+//     if(isNaN(x)) throw "not a number";
+//     x = Number(x);
+//     if(x < 5) throw "too low";
+//     if(x > 10) throw "too high";
+// }
+// catch(err){
+//     console.log(err);
+// }
+// finally{
+//     console.log("I am testing errors");
+// }
 
 
-let num = 5;
+// let num = 5;
 
-try{
-    num.toPrecision(500);
-}
-catch(err){
-    console.log("to Precision error")
-}
+// try{
+//     num.toPrecision(500);
+// }
+// catch(err){
+//     console.log("to Precision error")
+// }
