@@ -364,30 +364,59 @@
 // learning this keyword and this is implicit function binding
 
 
-const person = {
-    firstName : "John",
-    lastName  : "Wick",
-    id        : 9389,
-    fullName  : function(){
-        return this.firstName + " " + this.lastName;
-    },
-    getFullName: function(){
-        return this.fullName();
-    }
-}
+// const person = {
+//     firstName : "John",
+//     lastName  : "Wick",
+//     id        : 9389,
+//     fullName  : function(){
+//         return this.firstName + " " + this.lastName;
+//     },
+//     getFullName: function(){
+//         return this.fullName();
+//     }
+// }
 
-console.log(person.getFullName());
+// console.log(person.getFullName());
 
 
 // explicit function binding
-const person1 = {
-    fullName : function(){
-        return this.firstName + " " + this.lastName; 
+// const person1 = {
+//     fullName : function(){
+//         return this.firstName + " " + this.lastName; 
+//     }
+// };
+// const person2 = {
+//     firstName : "John",
+//     lastName  : "Wick",
+// };
+
+// console.log(person1.fullName.call(person2));
+
+
+// learning arrow function
+
+// const hello = () => {
+//     return "hello world";
+// }
+
+// console.log(hello());
+
+
+
+// Learning Java Script Class
+
+class Car{
+    constructor(name, year){
+        this.name = name;
+        this.year = year;
+    }
+
+    super(){
+        console.log(`${this.name} is super fast`);
     }
 }
-const person2 = {
-    firstName : "John",
-    lastName  : "Wick",
-}
 
-console.log(person1.fullName.call(person2));
+const car1 = new Car("Toyota", 2017);
+
+
+car1.super();
