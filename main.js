@@ -405,18 +405,34 @@
 
 // Learning Java Script Class
 
-class Car{
-    constructor(name, year){
-        this.name = name;
-        this.year = year;
-    }
+// class Car{
+//     constructor(name, year){
+//         this.name = name;
+//         this.year = year;
+//     }
 
-    super(){
-        console.log(`${this.name} is super fast`);
-    }
-}
+//     super(){
+//         console.log(`${this.name} is super fast`);
+//     }
+// }
 
-const car1 = new Car("Toyota", 2017);
+// const car1 = new Car("Toyota", 2017);
 
 
-car1.super();
+// car1.super();
+
+
+// learning JSON 
+// JSON Structure
+
+const text = {
+    "employees":[
+        {"firstName": "John", "lastName": "Wick"},
+        {"firstName": "John", "lastName": "Abraham"},
+        {"firstname": "John", "lastName": "Cena"}
+    ]
+};
+
+let obj = JSON.parse(text);
+
+console.log(obj)
