@@ -423,16 +423,24 @@
 
 
 // learning JSON 
-// JSON Structure
+// Convert JSON to object
 
-const text = {
-    "employees":[
-        {"firstName": "John", "lastName": "Wick"},
-        {"firstName": "John", "lastName": "Abraham"},
-        {"firstname": "John", "lastName": "Cena"}
-    ]
-};
+let text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Wick" },' +
+'{ "firstName":"John" , "lastName":"Abraham" },' +
+'{ "firstName":"John" , "lastName":"Cena" } ]}';
 
-let obj = JSON.parse(text);
+const obj = JSON.parse(text);
 
-console.log(obj)
+console.log(obj.employees[0]);
+
+
+// Convert Obj to JSON
+let person = {
+    firstName: "Tahmid",
+    lastName: "Ashrad"
+}
+
+const json = JSON.stringify(person);
+
+console.log(json);
