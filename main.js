@@ -425,22 +425,40 @@
 // learning JSON 
 // Convert JSON to object
 
-let text = '{ "employees" : [' +
-'{ "firstName":"John" , "lastName":"Wick" },' +
-'{ "firstName":"John" , "lastName":"Abraham" },' +
-'{ "firstName":"John" , "lastName":"Cena" } ]}';
+// let text = '{ "employees" : [' +
+// '{ "firstName":"John" , "lastName":"Wick" },' +
+// '{ "firstName":"John" , "lastName":"Abraham" },' +
+// '{ "firstName":"John" , "lastName":"Cena" } ]}';
 
-const obj = JSON.parse(text);
+// const obj = JSON.parse(text);
 
-console.log(obj.employees[0]);
+// console.log(obj.employees[0]);
 
 
-// Convert Obj to JSON
-let person = {
-    firstName: "Tahmid",
-    lastName: "Ashrad"
+// // Convert Obj to JSON
+// let person = {
+//     firstName: "Tahmid",
+//     lastName: "Ashrad"
+// }
+
+// const json = JSON.stringify(person);
+
+// console.log(json);
+
+// Another This practice
+var karim = {
+    name: "Karim Rahman",
+    dob: 1996,
+    age: function(currentYear){
+        console.log(this.name + " is " + (currentYear - this.dob) + " years old");
+    }
 }
 
-const json = JSON.stringify(person);
+karim.age(2022);
 
-console.log(json);
+const rahim = {
+    name: "Abdur Rahim",
+    dob:2000
+}
+
+karim.age.call(rahim, 2022);
