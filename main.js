@@ -422,6 +422,8 @@
 // car1.super();
 
 
+
+
 // learning JSON 
 // Convert JSON to object
 
@@ -445,20 +447,84 @@
 
 // console.log(json);
 
+
+
+
 // Another This practice
-var karim = {
-    name: "Karim Rahman",
-    dob: 1996,
-    age: function(currentYear){
-        console.log(this.name + " is " + (currentYear - this.dob) + " years old");
-    }
+// var karim = {
+//     name: "Karim Rahman",
+//     dob: 1996,
+//     age: function(currentYear){
+//         console.log(this.name + " is " + (currentYear - this.dob) + " years old");
+//     }
+// }
+
+// karim.age(2022);
+
+// const rahim = {
+//     name: "Abdur Rahim",
+//     dob:2000
+// }
+
+// karim.age.call(rahim, 2022);
+
+
+
+
+// Difference Between call and apply method
+
+// var karim = {
+//     name: "Karim Rahman",
+//     dob: 1996,
+//     age: function(currentYear, msg){
+//         console.log(msg + ' ' + this.name + " is " + (currentYear - this.dob) + " years old");
+//     }
+// }
+
+
+// const rahim = {
+//     name: "Abdur Rahim",
+//     dob:2000
+// }
+
+// karim.age.apply(rahim, [2022, "Heollo World!"])
+
+
+
+
+// bind() method
+// var karim = {
+//     name: "Karim Rahman",
+//     dob: 1996,
+//     age: function(currentYear, msg){
+//         console.log(msg + ' ' + this.name + " is " + (currentYear - this.dob) + " years old");
+//     }
+// }
+
+
+// const rahim = {
+//     name: "Abdur Rahim",
+//     dob:2000
+// }
+
+// const rahimAge = karim.age.bind(rahim, 2022)
+
+// rahimAge("Hello World!");
+
+
+
+
+// Object in Java Script (Value Swap korar jonno ei functon)
+const Person = function(name,age, job){
+    this.name = name;
+    this.age =  age;
+    this.job = job;
 }
 
-karim.age(2022);
+const Hasan = new Person("Hasan Raahman", 23, "student");
+const Jabed = new Person("Jabed Hasan", 28, "employee");
+const Nahid = new Person("Nahid Hasan", 43, "Minister");
 
-const rahim = {
-    name: "Abdur Rahim",
-    dob:2000
-}
-
-karim.age.call(rahim, 2022);
+console.log(Hasan);
+console.log(Jabed);
+console.log(Nahid);
