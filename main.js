@@ -514,17 +514,12 @@
 
 
 
-// Object in Java Script (Value Swap korar jonno ei functon)
+// Prototype Based Inheritance
 const Person = function(name,age, job){
     this.name = name;
     this.age =  age;
     this.job = job;
 }
-
-const Hasan = new Person("Hasan Raahman", 23, "student");
-const Jabed = new Person("Jabed Hasan", 28, "employee");
-const Nahid = new Person("Nahid Hasan", 43, "Minister");
-
-console.log(Hasan);
-console.log(Jabed);
-console.log(Nahid);
+ Person.prototype.dateOfBirth = function () {
+    console.log(this.name + " born in " + (2018 - this.age));
+ }
