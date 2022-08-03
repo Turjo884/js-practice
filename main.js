@@ -514,12 +514,8 @@
 
 
 
-// Prototype Based Inheritance
-const Person = function(name,age, job){
-    this.name = name;
-    this.age =  age;
-    this.job = job;
-}
- Person.prototype.dateOfBirth = function () {
-    console.log(this.name + " born in " + (2018 - this.age));
- }
+// Arrow function with IIFE
+
+(() => {
+    console.log("My name is Tahmid Ashrad");
+}) ();
