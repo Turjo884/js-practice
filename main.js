@@ -516,6 +516,50 @@
 
 // Arrow function with IIFE
 
-(() => {
-    console.log("My name is Tahmid Ashrad");
-}) ();
+// (() => {
+//     console.log("My name is Tahmid Ashrad");
+// }) ();
+
+
+
+// Some array method
+
+const numbers = [19, 23, 14, 56, 32, 65, 10];
+
+// For es5
+// const findNum = numbers.map(function(theNum){
+//     return theNum === 56;
+// })
+
+// console.log(findNum);
+// console.log(findNum.indexOf(true));
+
+// For es6
+// console.log(numbers.findIndex(number => number === 65));
+
+
+
+// Map 
+const fruits = new Map([
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+]);
+
+// fruits.forEach ((value, key) =>
+//    console.log(`key is: ${key} and the value is: ${value}`)
+// )
+
+
+// fruits.forEach(function(value, key){
+//     console.log(`key is: ${key} and the value is: ${value}`)
+// });
+
+
+let text = "";
+for(const x of fruits.entries()){
+    text += x;
+    console.log(x);
+}
+
+console.log(text);
