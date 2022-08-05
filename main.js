@@ -556,10 +556,31 @@ const fruits = new Map([
 // });
 
 
-let text = "";
-for(const x of fruits.entries()){
-    text += x;
-    console.log(x);
+// let text = "";
+// for(const x of fruits.entries()){
+//     text += x;
+//     console.log(x);
+// }
+
+// console.log(text);
+
+
+
+
+
+// Another Class tutorial
+class Person6 {
+    constructor(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job
+    }
+
+    dateOfBirth() {
+        console.log(`${this.name} is ${50- this.age} years old`);
+    }
 }
 
-console.log(text);
+const Hasem = new Person6("Hasem Ahmed", 5, "student");
+
+Hasem.dateOfBirth();
