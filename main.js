@@ -569,18 +569,59 @@ const fruits = new Map([
 
 
 // Another Class tutorial
-class Person6 {
-    constructor(name, age, job) {
+// class Person6 {
+//     constructor(name, age, job) {
+//         this.name = name;
+//         this.age = age;
+//         this.job = job
+//     }
+
+//     dateOfBirth() {
+//         console.log(`${this.name} is ${50- this.age} years old`);
+//     }
+// }
+
+// const Hasem = new Person6("Hasem Ahmed", 5, "student");
+
+// Hasem.dateOfBirth();
+
+
+
+
+// This Keyword Explicit Binding
+// const person1 = {
+//     fullname: function(){
+//         return this.firstName + " " + this.lastName;
+//     }
+// }
+
+// const person2 = {
+//     firstName: "John",
+//     lastName: "Doe"
+// }
+
+// console.log(person1.fullname.call(person2))
+
+
+
+
+// Class revesion again
+
+class ClassName {
+    constructor(name, age){
         this.name = name;
         this.age = age;
-        this.job = job
     }
 
-    dateOfBirth() {
-        console.log(`${this.name} is ${50- this.age} years old`);
+    play(text, number){
+        console.log(`${this.name} is playing ${text} ${number} out of 100`);
     }
 }
 
-const Hasem = new Person6("Hasem Ahmed", 5, "student");
+const person1 = new ClassName("Sakib", 75);
+const person2 = new ClassName("Afif", 17);
+const person3 = new ClassName("Mustafizur", 8);
 
-Hasem.dateOfBirth();
+person1.play("Well",80);
+person2.play("outstanding", 100);
+person3.play("not that much good", 40);
