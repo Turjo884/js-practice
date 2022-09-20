@@ -607,21 +607,36 @@ const fruits = new Map([
 
 // Class revesion again
 
-class ClassName {
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
+// class ClassName {
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
 
-    play(text, number){
-        console.log(`${this.name} is playing ${text} ${number} out of 100`);
-    }
-}
+//     play(text, number){
+//         console.log(`${this.name} is playing ${text} ${number} out of 100`);
+//     }
+// }
 
-const person1 = new ClassName("Sakib", 75);
-const person2 = new ClassName("Afif", 17);
-const person3 = new ClassName("Mustafizur", 8);
+// const person1 = new ClassName("Sakib", 75);
+// const person2 = new ClassName("Afif", 17);
+// const person3 = new ClassName("Mustafizur", 8);
 
-person1.play("Well",80);
-person2.play("outstanding", 100);
-person3.play("not that much good", 40);
+// person1.play("Well",80);
+// person2.play("outstanding", 100);
+// person3.play("not that much good", 40);
+
+
+
+// Learning jSON again
+
+const text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+console.log(text);
+
+const objc = JSON.parse(text);
+console.log(objc);
+console.log(objc.employees[2]);
