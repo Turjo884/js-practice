@@ -630,13 +630,34 @@ const fruits = new Map([
 
 // Learning jSON again
 
-const text = '{ "employees" : [' +
-'{ "firstName":"John" , "lastName":"Doe" },' +
-'{ "firstName":"Anna" , "lastName":"Smith" },' +
-'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+// const text = '{ "employees" : [' +
+// '{ "firstName":"John" , "lastName":"Doe" },' +
+// '{ "firstName":"Anna" , "lastName":"Smith" },' +
+// '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
 
-console.log(text);
+// console.log(text);
 
-const objc = JSON.parse(text);
-console.log(objc);
-console.log(objc.employees[2]);
+// const objc = JSON.parse(text);
+// console.log(objc);
+// console.log(objc.employees[2]);
+
+
+
+
+
+// Second Phase Problem solving part 2
+
+// নিচের এ "Turjo" শব্দটি কয়বার ব্যবহার করা হয়েছে? প্রথমবার "Turjo" কত নাম্বার পজিশনে পাওয়া গেছে? 
+
+const senteces = "Learn with Turjo is all about teaching web devlopment in an efficient and practical manner. If you are just getting started in web development, Lear with Turjo has all the tools you need to learn for Turjo. Thanks."
+
+
+const matches = senteces.match(/TurjoKhan/ig);
+const times = matches ? matches.length : "no matches";
+console.log(times);
+
+
+const position = senteces.search(/Turjos/i);
+const positionFound = position >= 0 ? position : "not found";
+console.log(positionFound);
+
