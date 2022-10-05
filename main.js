@@ -721,9 +721,9 @@ function fizzBuzz(number){
             console.log(`${i} is Buzz`);
         }
         else{
-            console.log(i);
+            console.log(`${i} is not a fizzBuzz num`);
         }
     }
 }
 
-fizzBuzz(100)
+fizzBuzz(101)
