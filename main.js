@@ -649,15 +649,58 @@ const fruits = new Map([
 
 // নিচের এ "Turjo" শব্দটি কয়বার ব্যবহার করা হয়েছে? প্রথমবার "Turjo" কত নাম্বার পজিশনে পাওয়া গেছে? 
 
-const senteces = "Learn with Turjo is all about teaching web devlopment in an efficient and practical manner. If you are just getting started in web development, Lear with Turjo has all the tools you need to learn for Turjo. Thanks."
+// Problem 1
+
+// const senteces = "Learn with Turjo is all about teaching web devlopment in an efficient and practical manner. If you are just getting started in web development, Lear with Turjo has all the tools you need to learn for Turjo. Thanks."
 
 
-const matches = senteces.match(/TurjoKhan/ig);
-const times = matches ? matches.length : "no matches";
-console.log(times);
+// const matches = senteces.match(/TurjoKhan/ig);
+// const times = matches ? matches.length : "no matches";
+// console.log(times);
 
 
-const position = senteces.search(/Turjos/i);
-const positionFound = position >= 0 ? position : "not found";
-console.log(positionFound);
+// const position = senteces.search(/Turjos/i);
+// const positionFound = position >= 0 ? position : "not found";
+// console.log(positionFound);
 
+
+
+// Problem 2 
+
+// input : linearSearch (['a', 'b', 'c', 'd', 'c'], 'c')
+// output: 2 or 'not found!'
+// problem: linearSearch() function টি implement করে দেখান 
+
+
+// function linearSearch(arr, val) {
+//  const length = arr.length;
+//  for (let i = 0; i < length; i++){
+//      if(arr[i] === val){
+//         return i;
+//      }
+//  }
+
+//   return "not found!";
+
+// }
+
+// console.log(linearSearch(['a', 'b', 'c', 'd', 'c', 'f'], 'f'));
+
+
+
+// Problem 3
+
+// কোন Array থেকে কি ভাবে সব থেকে বড় string খুজে বের করবেন এবং index number দেখাবেন? 
+
+
+function longestString(names){
+    let longestWord = '';
+    for(nene of names){
+        if(nene.length > longestWord.length){
+            longestWord = nene;
+        }
+    }
+       return [longestWord, names.indexOf(longestWord)];
+}
+
+console.log(longestString(["Tahmid Ashrad", "Tahmid Ashrad Turjo", "Himi", "Janntul Ferdous", "Jannatul Ferdous Himi"]));
