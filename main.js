@@ -770,7 +770,7 @@ const obj = {
   k: NaN,
 };
 
-
+// Note: sob jiagai obj use kora hoye ami try ore dekhar jonoo myObj use koresi
 const truthyObject = function(myObj){
   for(let i in myObj){
     if(!myObj[i]){
