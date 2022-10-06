@@ -524,7 +524,7 @@
 
 // Some array method
 
-const numbers = [19, 23, 14, 56, 32, 65, 10];
+// const numbers = [19, 23, 14, 56, 32, 65, 10];
 
 // For es5
 // const findNum = numbers.map(function(theNum){
@@ -540,11 +540,11 @@ const numbers = [19, 23, 14, 56, 32, 65, 10];
 
 
 // Map 
-const fruits = new Map([
-    ["apples", 500],
-    ["bananas", 300],
-    ["oranges", 200]
-]);
+// const fruits = new Map([
+//     ["apples", 500],
+//     ["bananas", 300],
+//     ["oranges", 200]
+// ]);
 
 // fruits.forEach ((value, key) =>
 //    console.log(`key is: ${key} and the value is: ${value}`)
@@ -709,21 +709,77 @@ const fruits = new Map([
 
 // ১-১০০ পর্যন্ত কোন সংখ্যা গুলো ৩, ৫ এবং ৩ ও ৫ উভই সংখ্যা দ্বারা তা বের কর ।
 
-function fizzBuzz(number){
-    for(let i = 1; i <= number; i++){
-        if(i % 15 === 0){
-            console.log(`${i} is fizzBuzz`);
-        }
-        else if(i % 3 === 0){
-            console.log(`${i} is fizz`);
-        }
-        else if (i % 5 === 0){
-            console.log(`${i} is Buzz`);
-        }
-        else{
-            console.log(`${i} is not a fizzBuzz num`);
-        }
+// function fizzBuzz(number){
+//     for(let i = 1; i <= number; i++){
+//         if(i % 15 === 0){
+//             console.log(`${i} is fizzBuzz`);
+//         }
+//         else if(i % 3 === 0){
+//             console.log(`${i} is fizz`);
+//         }
+//         else if (i % 5 === 0){
+//             console.log(`${i} is Buzz`);
+//         }
+//         else{
+//             console.log(`${i} is not a fizzBuzz num`);
+//         }
+//     }
+// }
+
+
+
+
+
+// Problem 5
+
+// Array থেকে Falsy value কিভাবে খুজে বের করে বাদ দিতে পারি?
+
+
+// const mixedArr = ["lws", undefined, "learn with sumit", false, "", "apple", 40, "k", true, "Thanks all", NaN];
+
+// const trueArray = mixedArr.filter(function(value){
+//   if(value){
+//     return true;
+//   }
+//   else{
+//     return false;
+//   }
+// });
+
+// const trueArray = mixedArr.filter(Boolean);
+
+// console.log(trueArray);
+
+
+
+// Problem 6
+
+// Object থেকে falsy value কিভাবে খুজে বের করে বাদ দিতে পারি ?
+
+const obj = {
+  a: "lws",
+  b: undefined,
+  c: "learn with sumit",
+  d: false,
+  e: "",
+  f: "apple",
+  g: 40,
+  h: "k",
+  i: true,
+  j: "Thanks all",
+  k: NaN,
+};
+
+
+const truthyObject = function(myObj){
+  for(let i in myObj){
+    if(!myObj[i]){
+      delete myObj[i];
     }
+  }
+
+  return myObj;
+
 }
 
-fizzBuzz(101)
+console.log(truthyObject(obj))
