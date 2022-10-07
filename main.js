@@ -756,30 +756,81 @@
 
 // Object থেকে falsy value কিভাবে খুজে বের করে বাদ দিতে পারি ?
 
-const obj = {
-  a: "lws",
-  b: undefined,
-  c: "learn with sumit",
-  d: false,
-  e: "",
-  f: "apple",
-  g: 40,
-  h: "k",
-  i: true,
-  j: "Thanks all",
-  k: NaN,
+// const obj = {
+  //   a: "lws",
+  //   b: undefined,
+  //   c: "learn with sumit",
+  //   d: false,
+  //   e: "",
+  //   f: "apple",
+  //   g: 40,
+  //   h: "k",
+  //   i: true,
+  //   j: "Thanks all",
+  //   k: NaN,
+// };
+
+// // Note: sob jiagai obj use kora hoye ami try ore dekhar jonoo myObj use koresi
+// const truthyObject = function(myObj){
+//   for(let i in myObj){
+//     if(!myObj[i]){
+//       delete myObj[i];
+//     }
+//   }
+
+//   return myObj;
+
+// }
+
+// console.log(truthyObject(obj))
+
+
+
+// Javascript Object Propertise
+
+
+// const person = {
+//   fullName: "Tahmid Ashrad",
+//   age     : 35
+// };
+
+// delete person.age;
+
+// person.country = "Bangladesh";
+
+// let text = '';
+// for(let x in person){
+//   console.log(text += person[x] + " ");
+// };
+
+// console.log(text);
+
+
+// nested object expamples
+
+myObj = {
+  name:"John",
+  age:30,
+  cars: [{
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"    
+  },
+  {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"    
+  },
+  {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"    
+  }]
 };
 
-// Note: sob jiagai obj use kora hoye ami try ore dekhar jonoo myObj use koresi
-const truthyObject = function(myObj){
-  for(let i in myObj){
-    if(!myObj[i]){
-      delete myObj[i];
-    }
-  }
-
-  return myObj;
-
+const text = "";
+for (let i in myObj.cars){
+   console.log(myObj.cars[i]);
 }
 
-console.log(truthyObject(obj))
+console.dir(myObj.cars)
