@@ -808,29 +808,82 @@
 
 // nested object expamples
 
-myObj = {
-  name:"John",
-  age:30,
-  cars: [{
-    car1:"Ford",
-    car2:"BMW",
-    car3:"Fiat"    
-  },
-  {
-    car1:"Ford",
-    car2:"BMW",
-    car3:"Fiat"    
-  },
-  {
-    car1:"Ford",
-    car2:"BMW",
-    car3:"Fiat"    
-  }]
-};
+// myObj = {
+//   name:"John",
+//   age:30,
+//   cars: [{
+//     car1:"Ford",
+//     car2:"BMW",
+//     car3:"Fiat"    
+//   },
+//   {
+//     car1:"Ford",
+//     car2:"BMW",
+//     car3:"Fiat"    
+//   },
+//   {
+//     car1:"Ford",
+//     car2:"BMW",
+//     car3:"Fiat"    
+//   }]
+// };
 
-const text = "";
-for (let i in myObj.cars){
-   console.log(myObj.cars[i]);
-}
+// const text = "";
+// for (let i in myObj.cars){
+//    console.log(myObj.cars[i]);
+// }
 
-console.dir(myObj.cars)
+// console.dir(myObj.cars)
+
+
+// Js display
+
+// const person = {
+//   names: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// let text = " ";
+// for(let i in person){
+//   text += person[i] + " ";
+// }
+
+// document.getElementById("demo").innerHTML = text.names + " is " + person.age + " and he lives in " + person.city;
+
+// document.getElementById("demo").innerHTML =  text;
+
+
+// const personArray = (Object.values(person));
+
+// etar moddhe diye for of loop kore browser e output dekha jabe
+
+
+// 4th method JSON.stringiry() method
+
+// const myString = JSON.stringify(person);
+
+// document.getElementById("demo").innerHTML = myString;
+
+
+
+
+
+// JS Object Accessories
+
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+}; 
+
+Object.defineProperty(person, "fullName",{
+   get: function(){
+    return this.firstName + " " + this.lastName;
+   }
+});
+
+console.log(person.fullName);
+
+
+
