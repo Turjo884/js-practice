@@ -871,19 +871,40 @@
 
 // JS Object Accessories
 
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+// }; 
 
-const person = {
-  firstName: "John",
-  lastName: "Doe",
-}; 
+// Object.defineProperty(person, "fullName",{
+//    get: function(){
+//     return this.firstName + " " + this.lastName;
+//    }
+// });
 
-Object.defineProperty(person, "fullName",{
-   get: function(){
-    return this.firstName + " " + this.lastName;
-   }
-});
+// console.log(person.fullName);
 
-console.log(person.fullName);
 
+
+// Constructor function
+
+
+function Person(first, last, age){
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.fullName = function() {
+    return this.firstName + " " + this.lastName
+  }
+};
+
+const turjo = new Person("Turjo", "Khan", 23);
+const tahmid = new Person ("Tahmid", "Ashrad", 24);
+const asad  = new Person("Assaduzzaman", "Nur", 30);
+
+
+asad.country = "Combodia";
+asad.job = "UI/UX designer";
+console.log(asad);
 
 
