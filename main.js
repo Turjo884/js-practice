@@ -916,24 +916,64 @@
 
 // Object Prototype
 
-function Person(first, last, age){
-     this.firstName = first;
-     this.lastName = last;
-     this.age = age;
-     this.fullName = function() {
-       return this.firstName + " " + this.lastName
-     }
-   };
+// function Person(first, last, age){
+//      this.firstName = first;
+//      this.lastName = last;
+//      this.age = age;
+//      this.fullName = function() {
+//        return this.firstName + " " + this.lastName
+//      }
+//    };
   
-   const turjo = new Person("Turjo", "Khan", 23);
-   const tahmid = new Person ("Tahmid", "Ashrad", 24);
-   const asad  = new Person("Assaduzzaman", "Nur", 30);
+//    const turjo = new Person("Turjo", "Khan", 23);
+//    const tahmid = new Person ("Tahmid", "Ashrad", 24);
+//    const asad  = new Person("Assaduzzaman", "Nur", 30);
 
 
-   Person.prototype.country = "Banladesh";
+//    Person.prototype.country = "Banladesh";
 
-   asad.country = "Combodioa";
+//    asad.country = "Combodioa";
 
-   console.dir(Person);
+//    console.dir(Person);
+
+
+
+
+// Object Iterable
+
+// const nums = [1,2,3];
+
+// console.dir(nums[Symbol.iterator]());
+
+// Object er moddhe Symbol.properyt implement korar process
+
+const myNumbers = {};
+
+// make it iterale
+
+myNumbers[Symbol.iterator] = function() {
+  let n = 0;
+  let done = false;
+  return{
+    next(){
+      n += 10;
+      if(n === 100){
+        done = true;
+      }
+      return {
+        value: n,
+        done: done
+      }
+    }
+  }
+};
+
+
+for(let num of myNumbers){
+  console.log(num);
+}
+
+
+
 
 
