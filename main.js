@@ -888,23 +888,52 @@
 
 // Constructor function
 
+// function Person(first, last, age){
+//   this.firstName = first;
+//   this.lastName = last;
+//   this.age = age;
+//   this.fullName = function() {
+//     return this.firstName + " " + this.lastName
+//   }
+// };
+
+// const turjo = new Person("Turjo", "Khan", 23);
+// const tahmid = new Person ("Tahmid", "Ashrad", 24);
+// const asad  = new Person("Assaduzzaman", "Nur", 30);
+
+
+// asad.country = "Combodia";
+// asad.job = "UI/UX designer";
+
+// // const myOutput = (Object.values(asad));
+// const myOutput = JSON.stringify(asad);
+
+// document.getElementById("demo").innerHTML = myOutput;
+
+// console.log(asad);
+
+
+
+// Object Prototype
 
 function Person(first, last, age){
-  this.firstName = first;
-  this.lastName = last;
-  this.age = age;
-  this.fullName = function() {
-    return this.firstName + " " + this.lastName
-  }
-};
+     this.firstName = first;
+     this.lastName = last;
+     this.age = age;
+     this.fullName = function() {
+       return this.firstName + " " + this.lastName
+     }
+   };
+  
+   const turjo = new Person("Turjo", "Khan", 23);
+   const tahmid = new Person ("Tahmid", "Ashrad", 24);
+   const asad  = new Person("Assaduzzaman", "Nur", 30);
 
-const turjo = new Person("Turjo", "Khan", 23);
-const tahmid = new Person ("Tahmid", "Ashrad", 24);
-const asad  = new Person("Assaduzzaman", "Nur", 30);
 
+   Person.prototype.country = "Banladesh";
 
-asad.country = "Combodia";
-asad.job = "UI/UX designer";
-console.log(asad);
+   asad.country = "Combodioa";
+
+   console.dir(Person);
 
 
