@@ -945,34 +945,52 @@
 
 // console.dir(nums[Symbol.iterator]());
 
+
+
 // Object er moddhe Symbol.properyt implement korar process
 
-const myNumbers = {};
+// const myNumbers = {};
 
 // make it iterale
 
-myNumbers[Symbol.iterator] = function() {
-  let n = 0;
-  let done = false;
-  return{
-    next(){
-      n += 10;
-      if(n === 100){
-        done = true;
-      }
-      return {
-        value: n,
-        done: done
-      }
-    }
-  }
-};
+// myNumbers[Symbol.iterator] = function() {
+//   let n = 0;
+//   let done = false;
+//   return{
+//     next(){
+//       n += 10;
+//       if(n === 100){
+//         done = true;
+//       }
+//       return {
+//         value: n,
+//         done: done
+//       }
+//     }
+//   }
+// };
 
 
-for(let num of myNumbers){
-  console.log(num);
-}
+// for(let num of myNumbers){
+//   console.log(num);
+// }
 
+
+
+
+// JS sets
+
+const apples = {name: "Apples"};
+const bananas = {name: "Bananas"};
+const oranges = {name: "Oranges"};
+
+const fruits = new Map();
+
+fruits.set(apples, 500);
+fruits.set(bananas, 300);
+fruits.set(oranges, 200);
+
+console.log(fruits.get(apples));
 
 
 
