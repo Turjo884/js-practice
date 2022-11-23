@@ -990,10 +990,21 @@
 // fruits.set(bananas, 300);
 // fruits.set(oranges, 200);
 
-// console.log(fruits.get(apples));
+// console.log(fruits.get(apples)
 
 
-(function (){
-  console.log("I am learning JS");
-})()
-;
+
+// Function  hoisting 
+
+
+const result = myFunction(3, 4);
+
+function myFunction(a, b){
+  return a * b;
+}
+
+console.log(result);
+
+const x = function(x, y){
+  return x * y;
+}
